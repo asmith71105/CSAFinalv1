@@ -3,25 +3,31 @@ import java.util.Scanner;
 public class songClass extends albumClass
 {
     //Instance Variables
-    private double length;
-    private int trackNum;
-    private String songName;
+    private static double length;
+    private static int trackNum;
+    private static String songName;
+
 
     //Constructors
-   /* public Song(double length, int trackNum, String songName, String genre, String albumName)
+    public void Song(double newLength, int newTrackNum, String newSongName, String newGenre, String newAlbumName)
     {
-        super(genre, albumName);
-        this.length = length;
-        this.trackNum = trackNum;
-        this.songName = songName;
-    } */
-
-    //Brain Method
-    public static void generateResults()
-    {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("What's your favorite color? \nA. Blue\nB. Pink\nC. Yellow\nD. Green");
+        length = newLength;
+        trackNum = newTrackNum;
+        songName = newSongName;
+        genre = newGenre;
+        albumName = newAlbumName;
     }
+
+    public static void generateSong()
+    {
+        Scanner keyboard2 = new Scanner(System.in);
+
+        if(albumName.equals("folklore"))
+        {
+            System.out.println("Choose one of these sad songs to cry to.");
+        }
+    }
+
 
     //Getters
     public double getLength()
@@ -40,19 +46,19 @@ public class songClass extends albumClass
     }
 
     //Setters
-    public void setLength(double length)
+    public void setLength(double newLength)
     {
-        this.length = length;
+        length = newLength;
     }
 
-    public void setTrackNum(int trackNum)
+    public void setTrackNum(int newTrackNum)
     {
-        this.trackNum = trackNum;
+        trackNum = newTrackNum;
     }
 
-    public void setSongName(String songName)
+    public void setSongName(String newSongName)
     {
-        this.songName = songName;
+        songName = newSongName;
     }
 
 
